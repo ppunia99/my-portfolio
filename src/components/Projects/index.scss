@@ -1,0 +1,32 @@
+.myProjects {
+  text-align: center;
+  animation: fadeIn 1s;
+}
+
+.imageContainer {
+  width: 1500px;
+  .images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    .proj1 {
+      .proj1image {
+        height: 200px;
+        width: 400px;
+      }
+    }
+    .proj2 {
+      .proj2image {
+        height: 200px;
+        width: 400px;
+      }
+    }
+    .proj3 {
+      .proj3image {
+        height: 250px;
+        width: 300px;
+      }
+    }
+  }
+}
