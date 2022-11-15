@@ -4,7 +4,8 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import Logo from './Logo'
 import './index.scss'
-// import { Pt, Space, Create, Group, Form } from 'pts'
+import lakersLogo from './../../assets/images/lakersLogo.jpeg'
+
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
@@ -14,28 +15,6 @@ const Home = () => {
   useEffect(() => {
     setLetterClass('text-animate-hover')
   }, [])
-
-  // (function () {
-  //   // Pts quick start mode.
-  //   var run = Pt.quickStart('#pt', '#123')
-
-  //   run((time, ftime) => {
-  //     // get a line from pointer to center, and use it for direction and magnitude calculations
-  //     let ln = Space.pointer.$subtract(Space.center.$add(0.1))
-  //     let dir = ln.$unit()
-  //     let mag = ln.magnitude()
-  //     let mag2 = Space.size.magnitude()
-
-  //     // create a grid of lines
-  //     let lines = Create.gridPts(Space.innerBound, 20, 10).map((p) => {
-  //       let dist = p.$subtract(Space.center).magnitude() / mag2
-  //       return new Group(p, p.$add(dir.$multiply(dist * (20 + mag / 5))))
-  //     })
-
-  //     Form.strokeOnly('#fe3').line([Space.center, Space.pointer])
-  //     Form.strokeOnly('#fff').lines(lines)
-  //   })
-  // })()
 
   return (
     <>
@@ -69,7 +48,13 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
-        <Logo />
+        <div className="logo-container">
+          <img
+            className="solid-logo"
+            src={lakersLogo}
+            alt="JavaScript,  Developer"
+          />
+        </div>{' '}
       </div>
 
       <Loader type="pacman" />
