@@ -60,7 +60,6 @@ const Home = () => {
             <span className={`${letterClass} _13`}>I</span>
             <span className={`${letterClass} _14`}>'m</span>
             <br />
-            <br />
 
             {nameToggle === true && (
               <AnimatedLetters
