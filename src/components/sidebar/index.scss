@@ -131,3 +131,130 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .nav-bar {
+    background: #d4af37;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    // width: 100%;
+    transform: rotate(90deg);
+    top: 530px;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      padding: 4px;
+      font-size: 10px;
+      color: #1c1c1c;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      display: none;
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      position: absolute;
+      max-height: 10px;
+
+      a {
+        font-size: 15px;
+        color: #4d4d4e;
+        display: block;
+        position: relative;
+        text-decoration: none;
+        transform: rotate(270deg);
+
+        i {
+          transition: all 0.3s ease-out;
+        }
+
+        &:hover {
+          color: #1c1c1c;
+          font-weight: 600;
+
+          svg {
+            opacity: 0;
+          }
+
+          &:after {
+            opacity: 1;
+          }
+        }
+
+        &:after {
+          content: '';
+          font-size: 9px;
+          letter-spacing: 2px;
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          width: 100%;
+          text-align: center;
+          opacity: 0;
+          -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+        }
+
+        &:first-child {
+          &:after {
+            content: 'HOME';
+          }
+        }
+      }
+
+      a.about-link {
+        &:after {
+          content: 'ABOUT';
+        }
+      }
+
+      a.contact-link {
+        &:after {
+          content: 'CONTACT';
+        }
+      }
+
+      a.project-link {
+        &:after {
+          content: 'PROJECT';
+        }
+      }
+
+      a.active {
+        svg {
+          color: #1c1c1c;
+        }
+      }
+    }
+
+    ul {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      display: block;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      margin: 0;
+
+      li {
+        a {
+          padding: 7px 0;
+          display: block;
+          font-size: 15px;
+          color: #4d4d4e;
+        }
+
+        &:hover {
+          .anchor-icon {
+            color: #ffd700;
+          }
+        }
+      }
+    }
+  }
+}

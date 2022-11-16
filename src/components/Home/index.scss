@@ -111,7 +111,7 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
   .tags,
   .home-page h1:before,
   .home-page h1:after {
@@ -133,23 +133,11 @@
     width: 124px;
   }
 
-  .logo-container {
-    position: relative;
-    width: 100px;
-    height: auto;
-    top: 50px;
-    right: 0;
-    box-sizing: border-box;
-    margin: auto;
-    left: 0;
-  }
-
-  .logo-container svg {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    margin: auto;
+  .home-animation-container {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

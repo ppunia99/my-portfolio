@@ -74,3 +74,78 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .stage-cube-cont {
+    display: flex;
+    flex-direction: row;
+    top: 600px;
+    width: 300px;
+    right: 50px;
+    flex-wrap: wrap;
+    height: 300px;
+    .flip-card {
+      // background-color: transparent;
+      width: 100px;
+      height: 75px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      // position: relative;
+      width: 100px;
+      height: 75px;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100px;
+      height: 75px;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+      background-color: transparent;
+      // color: black;
+      .iconsize {
+        // background-color: transparent;
+        height: 50px;
+        width: 50px;
+        color: white;
+      }
+    }
+
+    /* Style the back side */
+    .flip-card-back {
+      background-color: transparent;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: left;
+      }
+
+      .circlerating {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}

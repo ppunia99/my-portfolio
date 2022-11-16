@@ -12,13 +12,11 @@ const Home = () => {
   const [questionLetterClass, setQuestionLetterClass] = useState(
     'question-animate',
   )
-  const [sorryLetterClass, setSorryLetterClass] = useState('sorry-none')
-  const [awkwardLetterClass, setAwkwardLetterClass] = useState('sorry-none')
+  const [dotLetterClass, setDotLetterClass] = useState('dot-none')
   const [nameToggle, setNameToggle] = useState(false)
 
   const questionMarkArray = ['?', '?', '?']
-  const sorryArray = ['U', 'm', 'm', '.', '.', '.']
-  const awkwardArray = ['O', 'h', '', 'G', 'o', 't', '', 'i', 't', '!']
+  const dotArray = ['.', '.', '.']
   const nameArray = ['P', 'r', 'i', 't', 'h']
   const jobArray = ['W', 'e', 'l', 'c', 'o', 'm', 'e']
 
@@ -30,20 +28,14 @@ const Home = () => {
       setQuestionLetterClass('question-animate-none')
     }, 4000)
     setTimeout(() => {
-      setSorryLetterClass('sorry-animate')
+      setDotLetterClass('dot-animate')
     }, 5000)
     setTimeout(() => {
-      setSorryLetterClass('sorry-animate-none')
-    }, 10000)
-    setTimeout(() => {
-      setAwkwardLetterClass('awkward-animate')
-    }, 13000)
-    setTimeout(() => {
-      setAwkwardLetterClass('awkward-animate-none')
-    }, 16000)
+      setDotLetterClass('dot-animate-none')
+    }, 8000)
     setTimeout(() => {
       setNameToggle(true)
-    }, 17000)
+    }, 10000)
   }, [])
 
   const skipAnimation = () => {
@@ -71,19 +63,13 @@ const Home = () => {
             {nameToggle === false && (
               <>
                 <AnimatedLetters
+                  letterClass={dotLetterClass}
+                  strArray={dotArray}
+                  idx={15}
+                />
+                <AnimatedLetters
                   letterClass={questionLetterClass}
                   strArray={questionMarkArray}
-                  idx={15}
-                />
-                <AnimatedLetters
-                  letterClass={sorryLetterClass}
-                  strArray={sorryArray}
-                  idx={15}
-                />
-
-                <AnimatedLetters
-                  letterClass={awkwardLetterClass}
-                  strArray={awkwardArray}
                   idx={15}
                 />
               </>

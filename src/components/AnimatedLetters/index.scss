@@ -17,22 +17,6 @@
   }
 }
 
-.dot-animate {
-  display: inline-block;
-  opacity: 0;
-  animation: bounceIn 1s 1s;
-  animation-fill-mode: forwards;
-  min-width: 10px;
-}
-
-.dot-animate-none {
-  display: inline-block;
-  opacity: 0;
-  animation: rotateOutUpLeft 1s;
-  animation-fill-mode: forwards;
-  min-width: 10px;
-}
-
 .question-none {
   display: none;
 }
@@ -53,11 +37,11 @@
   min-width: 10px;
 }
 
-.sorry-none {
+.dot-none {
   display: none;
 }
 
-.sorry-animate {
+.dot-animate {
   display: inline-block;
   opacity: 0;
   animation: bounceIn 1s 1s;
@@ -65,40 +49,10 @@
   min-width: 10px;
 }
 
-.sorry-animate-none {
+.dot-animate-none {
   display: inline-block;
   opacity: 0;
   animation: rotateOutUpLeft 1s;
-  animation-fill-mode: forwards;
-  min-width: 10px;
-}
-
-.awkward-none {
-  display: none;
-}
-
-.awkward-animate {
-  display: inline-block;
-  opacity: 0;
-  animation: bounceIn 1s 1s;
-  animation-fill-mode: forwards;
-  min-width: 10px;
-}
-
-.awkward-animate-none {
-  display: inline-block;
-  opacity: 0;
-  animation: rotateOutUpLeft 1s;
-  animation-fill-mode: forwards;
-  min-width: 10px;
-}
-
-.thank-you {
-  display: inline-block;
-  opacity: 0;
-  animation: bounceIn;
-  animation-duration: 1s;
-  animation-delay: 1s;
   animation-fill-mode: forwards;
   min-width: 10px;
 }
@@ -111,12 +65,6 @@
     animation-delay: #{$i / 10}s;
   }
   .question-animate._#{$i} {
-    animation-delay: #{$i / 10}s;
-  }
-  .sorry-animate._#{$i} {
-    animation-delay: #{$i / 10}s;
-  }
-  .awkward-animate._#{$i} {
     animation-delay: #{$i / 10}s;
   }
 }
