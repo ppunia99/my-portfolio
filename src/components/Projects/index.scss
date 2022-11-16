@@ -148,6 +148,10 @@
         transition: transform 0.2s, -webkit-transform 0.2s;
         position: relative;
         left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         .proj1image {
           height: 50px;
@@ -171,6 +175,10 @@
         position: relative;
         left: 200px;
         bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         .proj2image {
           height: 50px;
@@ -193,6 +201,10 @@
         position: relative;
         bottom: 50px;
         left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         .proj3image {
           height: 62.5px;
