@@ -94,11 +94,12 @@ const Project = () => {
         <div className="proj-footer">
           <p>
             These are a few of my projects I have worked on from scratch. I
-            wanted to try something original and not just a twitter clone just
-            to test out my development skills without reference. I focused on
-            functionality and layout at first, and now I am currently working to
-            make them more visually appealing. If you are curious about the code
-            please visit my github by clicking on the link in the sidebar.
+            wanted to try something original, and not something I could easily
+            find online. I wanted to test my development skills without any easy
+            references. I focused on functionality and layout at first, and now
+            I am currently working to make them more visually appealing. If you
+            are curious about the code please visit my github by clicking on the
+            link in the sidebar.
           </p>
           <h5 className="hoverabove">
             Hover Right Above{' '}
