@@ -79,6 +79,36 @@
       color: #333;
     }
   }
+
+  .flat-button2 {
+    color: #ffd700;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #ffd700;
+    margin-top: 25px;
+    float: left;
+    animation: fadeInAnimation 1s 1.8s backwards;
+    white-space: nowrap;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background: #ffd700;
+      color: #333;
+    }
+  }
+}
+
+.home-animation-container {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1200px) {

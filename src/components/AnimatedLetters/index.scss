@@ -1,9 +1,7 @@
 .text-animate {
   display: inline-block;
   opacity: 0;
-  animation: bounceIn;
-  animation-duration: 1s;
-  animation-delay: 1s;
+  animation: bounceIn 1s 1s;
   animation-fill-mode: forwards;
   min-width: 10px;
 }
@@ -14,13 +12,111 @@
   animation-fill-mode: both;
 
   &:hover {
-    animation: heartBeat 1s;
-    color: #ffd700;
+    animation: rubberBand 1s;
+    color: #ea5656;
   }
+}
+
+.dot-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.dot-animate-none {
+  display: inline-block;
+  opacity: 0;
+  animation: rotateOutUpLeft 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.question-none {
+  display: none;
+}
+
+.question-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.question-animate-none {
+  display: inline-block;
+  opacity: 0;
+  animation: rotateOutUpLeft 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.sorry-none {
+  display: none;
+}
+
+.sorry-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.sorry-animate-none {
+  display: inline-block;
+  opacity: 0;
+  animation: rotateOutUpLeft 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.awkward-none {
+  display: none;
+}
+
+.awkward-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.awkward-animate-none {
+  display: inline-block;
+  opacity: 0;
+  animation: rotateOutUpLeft 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.thank-you {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
 }
 
 @for $i from 1 through 35 {
   .text-animate._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+  .dot-animate._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+  .question-animate._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+  .sorry-animate._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+  .awkward-animate._#{$i} {
     animation-delay: #{$i / 10}s;
   }
 }

@@ -1,5 +1,10 @@
 .nav-bar {
-  background: #181818;
+  // background: #ea5656;
+  // background: #daa520;
+  background: #d4af37;
+  // background: #c5b358;
+  // background: #cfb53b;
+
   width: 60px;
   height: 100%;
   position: absolute;
@@ -8,19 +13,14 @@
   min-height: 500px;
 
   .logo {
-    display: block;
-    padding: 8px 0;
-
-    img {
-      display: block;
-      margin: 8px auto;
-      width: 24px;
-      height: auto;
-
-      &.sub-logo {
-        width: 50px;
-      }
-    }
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    font-size: 20px;
+    color: #1c1c1c;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
   }
 
   nav {
@@ -46,7 +46,8 @@
       }
 
       &:hover {
-        color: #ffd700;
+        color: #1c1c1c;
+        font-weight: 600;
 
         svg {
           opacity: 0;
@@ -90,15 +91,15 @@
       }
     }
 
-    a.portfolio-link {
+    a.project-link {
       &:after {
-        content: 'PORTFOLIO';
+        content: 'PROJECT';
       }
     }
 
     a.active {
       svg {
-        color: #ffd700;
+        color: #1c1c1c;
       }
     }
   }

@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // .el {
+  //   height: 16px;
+  //   width: 16px;
+  //   background-color: green;
+  // }
+  #lineDrawing {
+    height: 500px;
+    width: 500px;
+    .my-path {
+      fill: none;
+      stroke: #cfc33a;
+      stroke-width: 4;
+      height: 100px;
+      width: 100px;
+    }
+  }
+}

@@ -1,12 +1,5 @@
 import { useEffect, useState } from 'react'
-import {
-  faAngular,
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faReact,
-} from '@fortawesome/free-brands-svg-icons'
+
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,6 +7,7 @@ import './index.scss'
 import Betting from '../../assets/ProjectImages/bettingDash.jpeg'
 import Fittrack from '../../assets/ProjectImages/fittrack.jpeg'
 import Twitter from '../../assets/ProjectImages/twitterBot.jpeg'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 const Project = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -39,7 +33,9 @@ const Project = () => {
           <div className="images">
             <div className="proj1">
               <img src={Betting} alt="Betting Project" className="proj1image" />
-              <h3 style={{ color: '#ffd700' }}>Project Title: BetOnIt.</h3>
+              <h3 style={{ color: '#ffd700', textAlign: 'center' }}>
+                Project Title: BetOnIt.
+              </h3>
               <p>
                 Conceptualized an interpersonal betting app that locks in bets
                 via validation and monetary system
@@ -59,7 +55,9 @@ const Project = () => {
                 alt="Fitness Project"
                 className="proj2image"
               />
-              <h3 style={{ color: '#ffd700' }}>Project Title: Fittrack.</h3>
+              <h3 style={{ color: '#ffd700', textAlign: 'center' }}>
+                Project Title: Fittrack.
+              </h3>
               <p>
                 Designed a dashboard filled with personal fitness data in order
                 to track changes over time
@@ -75,7 +73,9 @@ const Project = () => {
             </div>
             <div className="proj3">
               <img src={Twitter} alt="Twitter Bot" className="proj3image" />
-              <h3 style={{ color: '#ffd700' }}>Project Title: Twitter Bot</h3>
+              <h3 style={{ color: '#ffd700', textAlign: 'center' }}>
+                Project Title: Twitter Bot
+              </h3>
               <p>
                 Partnered with a developer to create an automated twitter-bot
                 that regularly posts updates of NFT sales
@@ -90,6 +90,20 @@ const Project = () => {
               </p>{' '}
             </div>
           </div>
+        </div>
+        <div className="proj-footer">
+          <p>
+            These are a few of my projects I have worked on from scratch. I
+            wanted to try something original and not just a twitter clone just
+            to test out my development skills without reference. I focused on
+            functionality and layout at first, and now I am currently working to
+            make them more visually appealing. If you are curious about the code
+            please visit my github by clicking on the link in the sidebar.
+          </p>
+          <h5 className="hoverabove">
+            Hover Right Above{' '}
+            <FontAwesomeIcon icon={faArrowUp} color="ffd700" />
+          </h5>
         </div>
       </div>
       <Loader type="pacman" />

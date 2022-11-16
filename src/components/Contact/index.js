@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
+import GIF from '../../assets/images/nbagif.gif'
+import { Animation1 } from '../animations/animation1'
+import anime from 'animejs/lib/anime.es.js'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -18,7 +22,12 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+      .sendForm(
+        'service_pv7c791',
+        'template_vrnc9ii',
+        form.current,
+        'piOs14lYnK9-OdBNA',
+      )
       .then(
         () => {
           alert('Message successfully sent!')
@@ -28,6 +37,7 @@ const Contact = () => {
           alert('Failed to send the message, please try again')
         },
       )
+    // e.target.reset()
   }
 
   return (
@@ -81,7 +91,9 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className="map-wrap"></div>
+        <div className="map-wrap">
+          <Animation1 />
+        </div>
       </div>
       <Loader type="pacman" />
     </>

@@ -1,0 +1,55 @@
+// @import url(//fonts.googleapis.com/css?family=Vibur);
+
+b {
+  font-size: 50px;
+}
+
+.neonlogo {
+  position: relative;
+  left: 400px;
+  bottom: 200px;
+}
+.neonlogo b {
+  color: white !important;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ea5656, 0 0 0.5em #ea5656,
+    0 0 0.1em #ea5656, 0 10px 3px #000;
+  z-index: 1000;
+}
+.neonlogo b span {
+  animation: blink linear infinite 2s;
+}
+.neonlogo b span:nth-of-type(2) {
+  animation: blink linear infinite 3s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}

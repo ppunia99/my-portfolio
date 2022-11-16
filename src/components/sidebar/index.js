@@ -13,10 +13,29 @@ import {
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
+  const p = 'P'
+  const r = 'r'
+  const i = 'i'
+  const t = 't'
+  const h = 'h'
   return (
     <>
       <div className="nav-bar">
-        <Link className="logo" to="/"></Link>
+        <Link className="logo" to="/">
+          {p}
+        </Link>
+        <Link className="logo" to="/">
+          {r}
+        </Link>
+        <Link className="logo" to="/">
+          {i}
+        </Link>
+        <Link className="logo" to="/">
+          {t}
+        </Link>
+        <Link className="logo" to="/">
+          {h}
+        </Link>
         <nav>
           <NavLink exact="true" activeclassname="active" to="/">
             <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
@@ -48,12 +67,20 @@ const Sidebar = () => {
         </nav>
         <ul>
           <li>
-            <a target="_blank" rel="noreferrer" href="linkedin.com">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/prithrajpunia/"
+            >
               <FontAwesomeIcon icon={faLinkedin} color="$4d4d4e" />
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noreferrer" href="github.com">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/ppunia99"
+            >
               <FontAwesomeIcon icon={faGithub} color="$4d4d4e" />
             </a>
           </li>

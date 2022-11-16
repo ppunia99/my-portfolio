@@ -1,16 +1,21 @@
 import { useEffect, useState } from 'react'
-import {
-  faAngular,
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faReact,
-} from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
+import HTML from '../../assets/images/logo1.png'
+import CSS from '../../assets/images/logo2.png'
+import JS from '../../assets/images/logo3.png'
+import React from '../../assets/images/react.png'
+import {
+  faReact,
+  faNodeJs,
+  faHtml5,
+  faCss3,
+  faJs,
+  faPython,
+} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -57,24 +62,112 @@ const About = () => {
         </div>
 
         <div className="stage-cube-cont">
-          <div className="cubespinner">
-            <div className="face1">
-              <FontAwesomeIcon icon={faAngular} color="#DD0031" />
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <FontAwesomeIcon icon={faPython} className="iconsize" />
+              </div>
+              <div className="flip-card-back">
+                <p>Python Proficiency:</p>
+                <div className="circlerating">
+                  {' '}
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="white" />
+                  <FontAwesomeIcon icon={faCircle} color="white" />
+                </div>
+              </div>
             </div>
-            <div className="face2">
-              <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+          </div>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <FontAwesomeIcon icon={faHtml5} className="iconsize" />
+              </div>
+              <div className="flip-card-back">
+                <p>HTML Proficiency:</p>
+                <div className="circlerating">
+                  {' '}
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                </div>
+              </div>
             </div>
-            <div className="face3">
-              <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+          </div>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <FontAwesomeIcon icon={faCss3} className="iconsize" />
+              </div>
+              <div className="flip-card-back">
+                <p>CSS Proficiency:</p>
+                <div className="circlerating">
+                  {' '}
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="white" />
+                </div>
+              </div>
             </div>
-            <div className="face4">
-              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+          </div>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <FontAwesomeIcon icon={faJs} className="iconsize" />
+              </div>
+              <div className="flip-card-back">
+                <p>Javascript Proficiency:</p>
+                <div className="circlerating">
+                  {' '}
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="white" />
+                </div>
+              </div>
             </div>
-            <div className="face5">
-              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+          </div>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <FontAwesomeIcon icon={faReact} className="iconsize" />
+              </div>
+              <div className="flip-card-back">
+                <p>React Proficiency:</p>
+                <div className="circlerating">
+                  {' '}
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="white" />
+                </div>
+              </div>
             </div>
-            <div className="face6">
-              <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+          </div>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <FontAwesomeIcon icon={faNodeJs} className="iconsize" />
+              </div>
+              <div className="flip-card-back">
+                <p>NodeJs Proficiency:</p>
+                <div className="circlerating">
+                  {' '}
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="#ffd700" />
+                  <FontAwesomeIcon icon={faCircle} color="white" />
+                  <FontAwesomeIcon icon={faCircle} color="white" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

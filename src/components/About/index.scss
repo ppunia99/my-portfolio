@@ -2,43 +2,75 @@
   width: 50%;
   height: 100%;
   top: 0;
-  padding-top: 18%;
   margin-left: 0;
   position: absolute;
   right: 0;
   overflow: hidden;
-}
-
-.cubespinner {
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 12s;
-  transform-style: preserve-3d;
-  transform-origin: 100px 100px 0;
-  margin-left: calc(50% - 100px);
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-  .face2 {
-    width: 200px;
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
     height: 200px;
-    transform: rotateY(90deg) translateZ(100px);
-    color: #f06529;
+    perspective: 1000px;
   }
-  .face3 {
-    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-    color: #28a4d9;
+
+  .flip-card-inner {
+    // position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
   }
-  .face4 {
-    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-    color: #5ed4f4;
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
   }
-  .face5 {
-    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-    color: #efd81d;
+
+  /* Position the front and back side */
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
   }
-  .face6 {
-    transform: rotateX(-90deg) translateZ(100px);
-    color: #ec4d28;
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: transparent;
+    // color: black;
+    .iconsize {
+      // background-color: transparent;
+      height: 100px;
+      width: 100px;
+      color: white;
+    }
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color: transparent;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    .circlerating {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
